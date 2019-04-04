@@ -93,7 +93,10 @@ function sampleProducer(kinesis, config) {
 
     kinesis.putRecord(recordParams, function(err, data) {
       if (err) {
-        log.error(err);
+        log.info('------------------------------------------------');
+        log.info(err);
+        log.info('------------------------------------------------');
+
       }
       else {
         log.info('Successfully sent data to Kinesis.');
