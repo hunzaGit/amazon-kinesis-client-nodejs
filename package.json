@@ -1,14 +1,14 @@
 {
-  "name": "aws-kcl",
+  "name": "test-kinesis-producer",
   "description": "Kinesis Client Libray (KCL) in Node.js.",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Amazon Web Services",
     "url": "http://aws.amazon.com/"
   },
   "main": "index.js",
   "engines": {
-    "node": ">= 0.8.0"
+    "node": "6.11.3"
   },
   "bin": {
     "kcl-bootstrap": "bin/kcl-bootstrap",
@@ -49,7 +49,7 @@
   "bugs": {
     "url": "https://github.com/awslabs/amazon-kinesis-client-nodejs/issues"
   },
-  "license": "Amazon Software License",
+  "license": "UNLICENSED",
   "keywords": [
     "api",
     "amazon",
