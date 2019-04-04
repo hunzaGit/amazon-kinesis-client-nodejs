@@ -21,8 +21,9 @@ var config = module.exports = {
   },
 
   sampleProducer : {
-    stream : 'kclnodejssample',
-    shards : 2,
+    // stream : 'kclnodejssample',
+    stream : 'jsonTestRodriStream',
+    shards : 1,
     waitBetweenDescribeCallsInSeconds : 5
   }
 };

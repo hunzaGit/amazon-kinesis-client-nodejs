@@ -67,10 +67,22 @@ function sampleProducer(kinesis, config) {
     var sensor = 'sensor-' + Math.floor(Math.random() * 100000);
     var reading = Math.floor(Math.random() * 1000000);
 
+    // var record = JSON.stringify({
+    //   time : currTime,
+    //   sensor : sensor,
+    //   reading : reading
+    // });
+
+    console.log("**********************************************************");
+    console.log("**********************************************************");
+    console.log("Mandando record -> ");
+    console.log("**********************************************************");
+    console.log("**********************************************************");
     var record = JSON.stringify({
-      time : currTime,
-      sensor : sensor,
-      reading : reading
+      id : "1",
+      // nombre : "nodejs",
+      nombre : "from Heroku",
+      empresa : "AdoptaUnAnimal-AWS"
     });
 
     var recordParams = {
@@ -91,17 +103,18 @@ function sampleProducer(kinesis, config) {
 
   return {
     run: function() {
-      _createStreamIfNotCreated(function(err) {
-        if (err) {
-          log.error(util.format('Error creating stream: %s', err));
-          return;
-        }
+      // _createStreamIfNotCreated(function(err) {
+      //   if (err) {
+      //     log.error(util.format('Error creating stream: %s', err));
+      //     return;
+      //   }
+      console.log("Mandando mensaje!");
         var count = 0;
         while (count < 10) {
           setTimeout(_writeToKinesis, 1000);
           count++;
         }
-      });
+      // });
     }
   };
 }

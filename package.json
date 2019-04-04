@@ -15,6 +15,7 @@
     "kcl-bootstrap.bat": "bin/kcl-bootstrap.bat"
   },
   "scripts": {
+    "start": "node samples/basic_sample/producer/sample_kinesis_producer_app.js",
     "build": "grunt build",
     "compile": "grunt compile",
     "clean": "grunt clean",
