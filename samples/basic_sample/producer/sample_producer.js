@@ -76,8 +76,8 @@ function sampleProducer(kinesis, config) {
 
 
             console.log("Mandando mensaje!");
-            var count = 30;
-            var limit = 40;
+            var count = 100;
+            var limit = 120;
             while (count < limit) {
                 globalCount = count;
 
