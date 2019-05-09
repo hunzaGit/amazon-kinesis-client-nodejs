@@ -11,21 +11,20 @@ module.exports = () => {
         timestamp: Date.now(),
         especie: especie,
         raza: randomVal(p["razas_" + especie]),
-        // estado: randomVal(p.estados_animal) || 'En adopción',
-        // sexo: randomVal(p.sexos, true),
-        // tamano: randomVal(p.tamanos_animal, true),
-        // edad: randomVal(p.edades_animal, true),
-        // color: randomVal(p.colores_animal, true),
-        // caracter: randomVal(p.caracter_animal, true),
-        // chip: randomVal([true, false], true),
-        // ppp: randomVal([true, false], true),
+        estado: randomVal(p.estados_animal) || 'En adopción',
+        sexo: randomVal(p.sexos, true),
+        tamano: randomVal(p.tamanos_animal, true),
+        edad: randomVal(p.edades_animal, true),
+        color: randomVal(p.colores_animal, true),
+        caracter: randomVal(p.caracter_animal, true),
+        chip: randomVal([true, false], true),
+        ppp: randomVal([true, false], true),
         // -- vacunas: randomVal([true, false], true),
         location: randomLocationSpain(),
-        // maxDistance: randomInt(30000, 5000),
+        maxDistance: randomInt(30000, 5000),
         // -- limit: Number(req.query.num),
-        // pag: randomVal([1, 2, 3, 4], true) || 1
+        pag: randomVal([1, 2, 3, 4], true) || 1,
         nameSystem: process.env.nameSystem
-
     };
 };
 
