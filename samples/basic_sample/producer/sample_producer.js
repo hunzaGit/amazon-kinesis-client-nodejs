@@ -13,7 +13,7 @@
  permissions and limitations under the License.
  ***/
 
-
+var createRandomQuery = require('./randomQuery.js');
 var util = require('util');
 var logger = require('../../util/logger');
 var globalCount;
@@ -76,18 +76,24 @@ function sampleProducer(kinesis, config) {
 
 
             console.log("Mandando mensaje!");
-            var count = 100;
-            var limit = 120;
+            var count = 0;
+            var limit = process.env.numElements || 10;
             while (count < limit) {
                 globalCount = count;
 
+                // console.log(createRandomQuery);
+                // console.log(createRandomQuery());
+
                 var id = 'id-' + Math.floor(Math.random() * 10000000);
-                var record = JSON.stringify({
-                    id: count,
-                    // nombre : "nodejs",
-                    nombre: "from local nodejs",
-                    empresa: "test - 1"
-                });
+                // var record = JSON.stringify({
+                //     id: count,
+                    // nombre: "cambio pre randomQuery 04-05-2019",
+                    // empresa: "test rodri",
+                    // time: new Date().toISOString(),
+                    // timestamp: new Date().getTime()
+                // });
+
+                var record = JSON.stringify(createRandomQuery());
 
                 var recordParams = {
                     Data: record,
